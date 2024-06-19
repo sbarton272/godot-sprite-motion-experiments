@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://brrrxd6xeuhxe"]
+
+[ext_resource type="Texture2D" uid="uid://xu20mm34bxav" path="res://criters.png" id="1_0y4yo"]
+[ext_resource type="Script" path="res://Bird.gd" id="1_hu4hq"]
+[ext_resource type="PackedScene" uid="uid://lof8nbs60p8t" path="res://rabbit.tscn" id="3_8ka1a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yntqh"]
+radius = 167.027
+
+[node name="Root" type="Node2D"]
+
+[node name="NewtonBird" type="Area2D" parent="."]
+script = ExtResource("1_hu4hq")
+
+[node name="Sprite2D" type="Sprite2D" parent="NewtonBird"]
+texture = ExtResource("1_0y4yo")
+region_enabled = true
+region_rect = Rect2(42, 30, 156, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NewtonBird"]
+shape = SubResource("CircleShape2D_yntqh")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="NewtonBird"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Rabbit" parent="." instance=ExtResource("3_8ka1a")]
+position = Vector2(-41, -148)
+
+[node name="Rabbit2" parent="." instance=ExtResource("3_8ka1a")]
+position = Vector2(-72, -320)
+
+[node name="Rabbit3" parent="." instance=ExtResource("3_8ka1a")]
+position = Vector2(-211, -255)
+
+[node name="Rabbit4" parent="." instance=ExtResource("3_8ka1a")]
+position = Vector2(-303, -125)
+
+[node name="Rabbit5" parent="." instance=ExtResource("3_8ka1a")]
+position = Vector2(-460, -226)
+
+[node name="Rabbit6" parent="." instance=ExtResource("3_8ka1a")]
+position = Vector2(27, -160)
+
+[node name="Rabbit7" parent="." instance=ExtResource("3_8ka1a")]
+position = Vector2(85, 134)

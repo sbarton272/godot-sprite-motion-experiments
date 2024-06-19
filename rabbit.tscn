@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://lof8nbs60p8t"]
+
+[ext_resource type="Texture2D" uid="uid://xu20mm34bxav" path="res://criters.png" id="1_ov6gv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2obkx"]
+radius = 61.0082
+
+[node name="Rabbit" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_ov6gv")
+region_enabled = true
+region_rect = Rect2(352, 258, 167, 180)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2obkx")
